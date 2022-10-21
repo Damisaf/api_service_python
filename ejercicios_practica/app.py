@@ -1,14 +1,12 @@
 '''
 Flask [Python]
 Ejercicios de práctica
-
 Autor: Inove Coding School
 Version: 2.0
  
 Descripcion:
 Se utiliza Flask para crear un WebServer que levanta los datos de
 las personas registradas.
-
 Ingresar a la siguiente URL para ver los endpoints disponibles
 http://127.0.0.1:5000/
 '''
@@ -119,11 +117,10 @@ def comparativa():
 
         # Descomentar luego de haber implementado su función en persona.py:
 
-        # x, y = persona.dashboard()
-        # image_html = utils.graficar(x, y)
-        # return Response(image_html.getvalue(), mimetype='image/png')
-
-        return "Alumno --> Realice la implementacion"
+        x, y = persona.dashboard()
+        image_html = utils.graficar(x, y)
+        return Response(image_html.getvalue(), mimetype='image/png')
+        
     except:
         return jsonify({'trace': traceback.format_exc()})
 
